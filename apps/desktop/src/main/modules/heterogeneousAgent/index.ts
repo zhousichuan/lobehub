@@ -15,6 +15,7 @@ import { opencodeDriver } from './drivers/opencode';
 import { piDriver } from './drivers/pi';
 import { qoderDriver } from './drivers/qoder';
 import { traeDriver } from './drivers/trae';
+import { zcodeDriver } from './drivers/zcode';
 import type { HeterogeneousAgentDriver } from './types';
 
 const heterogeneousAgentDrivers = {
@@ -33,6 +34,7 @@ const heterogeneousAgentDrivers = {
   'pi': piDriver,
   'qoder': qoderDriver,
   'trae': traeDriver,
+  'zcode': zcodeDriver,
 } satisfies Record<LocalHeterogeneousAgentType, HeterogeneousAgentDriver>;
 
 export const getHeterogeneousAgentDriver = (agentType: string): HeterogeneousAgentDriver => {

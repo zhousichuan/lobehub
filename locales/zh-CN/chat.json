@@ -307,6 +307,7 @@
   "connectAgent.providerDesc.pi": "轻量编码助理 CLI",
   "connectAgent.providerDesc.qoder": "Qoder 编码助理 CLI",
   "connectAgent.providerDesc.trae": "TRAE 企业版编码助理 CLI",
+  "connectAgent.providerDesc.zcode": "ZCode 编码智能体 CLI",
   "copilotInstallGuide.actions.openDocs": "打开安装指南",
   "copilotInstallGuide.actions.openSystemTools": "打开系统工具",
   "copilotInstallGuide.afterInstall": "安装完成后，请运行 `copilot login` 登录，然后重试刚才的消息，或在系统工具中点击“重新检测”。",
@@ -2020,6 +2021,7 @@
   "newPlatformAgentDesc": "连接 Claude Code、OpenClaw 等助理",
   "newQoderAgent": "添加 Qoder",
   "newTraeAgent": "添加 TRAE CLI",
+  "newZcodeAgent": "添加 ZCode",
   "noAgentsYet": "这个群组还没有成员。点击「+」邀请助理加入",
   "noAvailableAgents": "暂无可邀请的成员",
   "noMatchingAgents": "未找到匹配的成员",
@@ -4120,5 +4122,13 @@
   "worktreeRestore.failed": "无法恢复 worktree",
   "worktreeRestore.stillCleaning": "worktree 仍在清理中，请稍后再发送。",
   "worktreeRestore.waiting": "正在等待 worktree 清理完成后再恢复…",
-  "you": "你"
+  "you": "你",
+  "zcodeInstallGuide.actions.openDocs": "打开安装指南",
+  "zcodeInstallGuide.actions.openSystemTools": "打开系统工具",
+  "zcodeInstallGuide.afterInstall": "安装后，请运行 `zcode login` 登录，然后重试消息或在系统工具中点击「重新检测」。",
+  "zcodeInstallGuide.desc": "ZCode 需要在本地运行其 CLI。请安装 ZCode 并确保 zcode 命令在 PATH 中可用。",
+  "zcodeInstallGuide.installWithNpm": "推荐安装方式",
+  "zcodeInstallGuide.menuNotification.title": "未找到 ZCode CLI",
+  "zcodeInstallGuide.reason": "LobeHub 无法启动 ZCode：{{message}}",
+  "zcodeInstallGuide.title": "安装 ZCode CLI"
 }

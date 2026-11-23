@@ -124,7 +124,8 @@ export const isHeterogeneousSandboxExecutionAvailable = (type: string | undefine
   type !== 'openclaw' &&
   type !== 'pi' &&
   type !== 'qoder' &&
-  type !== 'trae';
+  type !== 'trae' &&
+  type !== 'zcode';
 
 /**
  * Whether an agent with no stored `executionTarget` takes the `auto` default

@@ -757,6 +757,13 @@ const HETEROGENEOUS_CLI_AGENT_OPTIONS = {
     validateKeywords: ['trae', 'traecode'],
     validatePattern: /^v?\d+\.\d+\.\d+(?:[-+][\dA-Za-z.-]+)?$/,
   },
+  'zcode': {
+    // ZCode prints a two-line banner (`zcode-app-cli X.Y.Z` + zcode-runtime);
+    // the distribution line anchors the version pattern. The help probe
+    // requires the headless/app-server surface LobeHub drives.
+    validateHelpKeywords: ['app-server', 'stream-json'],
+    validatePattern: /^zcode-app-cli v?\d+\.\d+\.\d+(?:[-+][\dA-Za-z.-]+)?$/,
+  },
 } as const satisfies Record<HeterogeneousCliAgentType, ValidateOptions>;
 
 // The default (bare) command each agent type is shipped to run. The well-known
@@ -951,6 +958,19 @@ const getWellKnownCommandPaths = (agentType: HeterogeneousCliAgentType): string[
       return [
         path.join(homedir(), '.local', 'bin', 'traecli'),
         path.join(homedir(), '.local', 'bin', 'trae-cli'),
+      ];
+    }
+    case 'zcode': {
+      if (platform() === 'win32') {
+        return [path.join(homedir(), 'AppData', 'Roaming', 'npm', 'zcode.cmd')];
+      }
+      if (platform() !== 'darwin' && platform() !== 'linux') return [];
+
+      return [
+        path.join(homedir(), '.local', 'bin', 'zcode'),
+        path.join(homedir(), '.bun', 'bin', 'zcode'),
+        path.join(homedir(), '.npm-global', 'bin', 'zcode'),
+        path.join(homedir(), 'Library', 'pnpm', 'zcode'),
       ];
     }
     default: {

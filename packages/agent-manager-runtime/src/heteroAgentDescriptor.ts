@@ -167,6 +167,13 @@ const HETERO_PROFILES: Record<HeteroType, HeteroTypeProfile> = {
     displayName: 'TRAE CLI',
     kind: 'cli',
   },
+  'zcode': {
+    capabilities: CODING_CAPABILITIES,
+    description:
+      'ZCode — an autonomous terminal coding agent with filesystem and shell access that completes software-engineering tasks autonomously.',
+    displayName: 'ZCode',
+    kind: 'cli',
+  },
 };
 
 const EXECUTION_TARGET_DESCRIPTIONS: Record<DeviceExecutionTarget, string> = {

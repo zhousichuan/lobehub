@@ -24,6 +24,7 @@ import {
   PiAdapter,
   QoderAdapter,
   TraeAcpAdapter,
+  ZcodeAdapter,
 } from './adapters';
 import type { LocalHeterogeneousAgentType } from './config';
 import type { AgentEventAdapter } from './types';
@@ -77,6 +78,9 @@ const localAgentRegistry = {
   },
   'trae': {
     createAdapter: () => new TraeAcpAdapter(),
+  },
+  'zcode': {
+    createAdapter: () => new ZcodeAdapter(),
   },
   // 'kimi-cli': { createAdapter: () => new KimiCLIAdapter() },
 } satisfies Record<LocalHeterogeneousAgentType, AgentRegistryEntry>;

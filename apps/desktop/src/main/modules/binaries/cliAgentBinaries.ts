@@ -176,6 +176,14 @@ export const traeBinary: BinarySpec = {
   priority: 7,
 };
 
+/** ZCode CLI @see https://github.com/kingsword09/zcode-cli */
+export const zcodeBinary: BinarySpec = {
+  description: 'ZCode - Z.ai agentic coding CLI',
+  detect: () => detectHeterogeneousCliCommand('zcode', 'zcode'),
+  name: 'zcode',
+  priority: 12,
+};
+
 /**
  * Google Gemini CLI
  * @see https://github.com/google-gemini/gemini-cli
@@ -245,6 +253,7 @@ export const heterogeneousCliAgentBinaries = {
   'pi': piBinary,
   'qoder': qoderBinary,
   'trae': traeBinary,
+  'zcode': zcodeBinary,
 } satisfies Record<LocalHeterogeneousAgentType, BinarySpec>;
 
 export const cliAgentBinaries: BinarySpec[] = [

@@ -515,6 +515,12 @@ export const HETERO_SELECTOR_CAPABILITIES = {
   'trae': {
     model: { encodings: [], resolve: resolvePersistedModel, source: 'catalog' },
   },
+  /**
+   * ZCode accepts `--model provider/model` per run, but exposes no headless
+   * model enumeration (its catalog lives behind the `app-server` protocol), so
+   * the selector stays hidden until that protocol path is wired up.
+   */
+  'zcode': {},
 } satisfies Record<
   LocalHeterogeneousAgentType | LocalRuntimeHeterogeneousAgentType,
   HeteroSelectorCapability

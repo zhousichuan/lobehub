@@ -49,7 +49,9 @@ export const buildExtraArgs = (options: HeteroCliArgumentOptions): string[] | un
               ? modelArg
               : options.type === 'copilot' || options.type === 'qoder'
                 ? [...modelArg, ...(options.effort ? ['--reasoning-effort', options.effort] : [])]
-                : [];
+                : options.type === 'zcode'
+                  ? [...modelArg, ...(options.effort ? ['--effort', options.effort] : [])]
+                  : [];
   const extraArgs = [...(options.agentArg ?? []), ...selectorArgs];
 
   return extraArgs.length > 0 ? extraArgs : undefined;

@@ -165,6 +165,7 @@ const grokBuildDescriptor = getHeterogeneousAgentConfigOrThrow('grok-build');
 const openCodeDescriptor = getHeterogeneousAgentConfigOrThrow('opencode');
 const piDescriptor = getHeterogeneousAgentConfigOrThrow('pi');
 const qoderDescriptor = getHeterogeneousAgentConfigOrThrow('qoder');
+const zcodeDescriptor = getHeterogeneousAgentConfigOrThrow('zcode');
 
 export const AMP_CLI_INSTALL_COMMANDS = ampDescriptor.install.commands;
 export const AMP_CLI_INSTALL_DOCS_URL = ampDescriptor.install.docsUrl;
@@ -189,3 +190,6 @@ export const PI_CLI_INSTALL_DOCS_URL = piDescriptor.install.docsUrl;
 export const QODER_CLI_AUTH_DOCS_URL = qoderDescriptor.auth.docsUrl;
 export const QODER_CLI_INSTALL_COMMANDS = qoderDescriptor.install.commands;
 export const QODER_CLI_INSTALL_DOCS_URL = qoderDescriptor.install.docsUrl;
+export const ZCODE_CLI_AUTH_DOCS_URL = zcodeDescriptor.auth.docsUrl;
+export const ZCODE_CLI_INSTALL_COMMANDS = zcodeDescriptor.install.commands;
+export const ZCODE_CLI_INSTALL_DOCS_URL = zcodeDescriptor.install.docsUrl;

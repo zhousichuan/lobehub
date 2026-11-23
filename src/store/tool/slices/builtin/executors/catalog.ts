@@ -34,6 +34,7 @@ import {
   piExecutor,
   qoderExecutor,
   traeExecutor,
+  zcodeExecutor,
 } from './heteroCli';
 import { activatorExecutor } from './lobe-activator';
 import { agentDocumentsExecutor } from './lobe-agent-documents';
@@ -67,6 +68,7 @@ export const builtinToolExecutors = [
   piExecutor,
   qoderExecutor,
   traeExecutor,
+  zcodeExecutor,
   agentBuilderExecutor,
   artboardHookExecutor,
   agentDocumentsExecutor,

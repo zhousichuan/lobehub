@@ -574,7 +574,7 @@ const exec = async (options: ExecOptions): Promise<void> => {
       agentType === 'cursor' ||
       agentType === 'droid' ||
       agentType === 'devin' ||
-      agentType === 'qoder') &&
+      ['qoder', 'zcode'].includes(agentType)) &&
     serverIngester
   ) {
     if (

@@ -126,3 +126,4 @@ export const openCodeExecutor = new HeteroCliExecutor('opencode', new Set(['bash
 export const piExecutor = new HeteroCliExecutor('pi', new Set(['bash']));
 export const qoderExecutor = new HeteroCliExecutor('qoder', new Set(['Bash']));
 export const traeExecutor = new HeteroCliExecutor('trae', new Set());
+export const zcodeExecutor = new HeteroCliExecutor('zcode', new Set(['Bash']));

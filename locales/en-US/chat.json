@@ -307,6 +307,7 @@
   "connectAgent.providerDesc.pi": "Minimal coding agent CLI",
   "connectAgent.providerDesc.qoder": "Qoder coding agent CLI",
   "connectAgent.providerDesc.trae": "TRAE Enterprise coding agent CLI",
+  "connectAgent.providerDesc.zcode": "ZCode coding agent CLI",
   "copilotInstallGuide.actions.openDocs": "Open Install Guide",
   "copilotInstallGuide.actions.openSystemTools": "Open System Tools",
   "copilotInstallGuide.afterInstall": "After installing, run `copilot login`, then retry your message or click Re-detect in System Tools.",
@@ -2020,6 +2021,7 @@
   "newPlatformAgentDesc": "Connect Claude Code, OpenClaw, and other agents",
   "newQoderAgent": "Add Qoder",
   "newTraeAgent": "Add TRAE CLI",
+  "newZcodeAgent": "Add ZCode",
   "noAgentsYet": "This group has no members yet. Click the + button to invite agents.",
   "noAvailableAgents": "No members available to invite",
   "noMatchingAgents": "No matching members found",
@@ -4120,5 +4122,13 @@
   "worktreeRestore.failed": "Couldn't restore the worktree",
   "worktreeRestore.stillCleaning": "The worktree is still being cleaned up. Try sending again in a moment.",
   "worktreeRestore.waiting": "Waiting for the worktree cleanup to finish before restoring it…",
-  "you": "You"
+  "you": "You",
+  "zcodeInstallGuide.actions.openDocs": "Open Install Guide",
+  "zcodeInstallGuide.actions.openSystemTools": "Open System Tools",
+  "zcodeInstallGuide.afterInstall": "After installing, run `zcode login`, then retry your message or click Re-detect in System Tools.",
+  "zcodeInstallGuide.desc": "ZCode needs its CLI to run locally. Install it and make sure the zcode command is available in your PATH.",
+  "zcodeInstallGuide.installWithNpm": "Recommended install",
+  "zcodeInstallGuide.menuNotification.title": "ZCode CLI not found",
+  "zcodeInstallGuide.reason": "LobeHub could not start ZCode: {{message}}",
+  "zcodeInstallGuide.title": "Install ZCode CLI"
 }

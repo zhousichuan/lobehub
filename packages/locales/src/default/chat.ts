@@ -1572,6 +1572,16 @@ export default {
   'qoderInstallGuide.menuNotification.title': 'Qoder CLI not found',
   'qoderInstallGuide.reason': 'LobeHub could not start Qoder: {{message}}',
   'qoderInstallGuide.title': 'Install Qoder CLI',
+  'zcodeInstallGuide.actions.openDocs': 'Open Install Guide',
+  'zcodeInstallGuide.actions.openSystemTools': 'Open System Tools',
+  'zcodeInstallGuide.afterInstall':
+    'After installing, run `zcode login`, then retry your message or click Re-detect in System Tools.',
+  'zcodeInstallGuide.desc':
+    'ZCode needs its CLI to run locally. Install it and make sure the zcode command is available in your PATH.',
+  'zcodeInstallGuide.installWithNpm': 'Recommended install',
+  'zcodeInstallGuide.menuNotification.title': 'ZCode CLI not found',
+  'zcodeInstallGuide.reason': 'LobeHub could not start ZCode: {{message}}',
+  'zcodeInstallGuide.title': 'Install ZCode CLI',
   'quickChatSwitcher.empty': 'No agents found',
   'quickChatSwitcher.more': 'More agents',
   'quickChatSwitcher.searchPlaceholder': 'Search agents...',
@@ -1613,6 +1623,7 @@ export default {
   'newPiAgent': 'Add Pi',
   'newQoderAgent': 'Add Qoder',
   'newTraeAgent': 'Add TRAE CLI',
+  'newZcodeAgent': 'Add ZCode',
   'newPlatformAgent': 'Connect External Agents',
   'newPlatformAgentDesc': 'Connect Claude Code, OpenClaw, and other agents',
   'newGroupChat': 'Create Group',
@@ -1712,6 +1723,7 @@ export default {
   'connectAgent.providerDesc.pi': 'Minimal coding agent CLI',
   'connectAgent.providerDesc.qoder': 'Qoder coding agent CLI',
   'connectAgent.providerDesc.trae': 'TRAE Enterprise coding agent CLI',
+  'connectAgent.providerDesc.zcode': 'ZCode coding agent CLI',
   'connectAgent.providerDesc.openclaw': 'Personal agent platform',
   'connectAgent.providerDesc.hermes': 'Personal agent platform',
 

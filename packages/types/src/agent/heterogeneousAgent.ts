@@ -449,6 +449,32 @@ export const HETEROGENEOUS_AGENT_CONFIGS = [
     title: 'TRAE CLI',
     type: 'trae',
   },
+  {
+    auth: {
+      docsUrl: 'https://github.com/kingsword09/zcode-cli#readme',
+      errorMessage: 'ZCode could not authenticate. Run `zcode login`, then retry.',
+      patterns: [
+        ...COMMON_AUTH_REQUIRED_PATTERNS,
+        'not logged in',
+        'please (?:log|sign) in',
+        'run `zcode login`',
+      ],
+      signInCommand: 'zcode login',
+    },
+    defaultCommand: 'zcode',
+    defaultTopicGroupMode: 'byProject',
+    iconId: 'ZAI',
+    install: {
+      commands: ['npm install -g zcode-app-cli'],
+      docsUrl: 'https://github.com/kingsword09/zcode-cli#readme',
+    },
+    kind: 'local-cli',
+    menuKey: 'newZcodeAgent',
+    menuLabelKey: 'newZcodeAgent',
+    resume: { supported: true },
+    title: 'ZCode',
+    type: 'zcode',
+  },
 ] as const satisfies readonly LocalHeterogeneousAgentDescriptor[];
 
 export const LOCAL_HETEROGENEOUS_AGENT_TYPES = HETEROGENEOUS_AGENT_CONFIGS.map(({ type }) => type);

@@ -228,6 +228,7 @@ const COPILOT_IDENTIFIER = 'copilot';
 const DROID_IDENTIFIER = 'droid';
 const DEVIN_IDENTIFIER = 'devin';
 const QODER_IDENTIFIER = 'qoder';
+const ZCODE_IDENTIFIER = 'zcode';
 const OPENCODE_IDENTIFIER = 'opencode';
 const PI_IDENTIFIER = 'pi';
 const KIMI_CODE_IDENTIFIER = 'kimi-code';
@@ -301,6 +302,7 @@ export const registerBuiltinToolSurfaces = (): void => {
       [ClaudeCodeApiName.AskUserQuestion]: ClaudeCodeRenders[ClaudeCodeApiName.AskUserQuestion],
     },
     [QODER_IDENTIFIER]: ClaudeCodeRenders as Record<string, BuiltinRender>,
+    [ZCODE_IDENTIFIER]: ClaudeCodeRenders as Record<string, BuiltinRender>,
     [CloudSandboxManifest.identifier]: CloudSandboxRenders as Record<string, BuiltinRender>,
     [GroupAgentBuilderManifest.identifier]: GroupAgentBuilderRenders as Record<
       string,
@@ -378,6 +380,7 @@ export const registerBuiltinToolSurfaces = (): void => {
       [ClaudeCodeApiName.AskUserQuestion]: ClaudeCodeInspectors[ClaudeCodeApiName.AskUserQuestion],
     },
     [QODER_IDENTIFIER]: ClaudeCodeInspectors as Record<string, BuiltinInspector>,
+    [ZCODE_IDENTIFIER]: ClaudeCodeInspectors as Record<string, BuiltinInspector>,
     [CloudSandboxManifest.identifier]: CloudSandboxInspectors as Record<string, BuiltinInspector>,
     [GroupAgentBuilderManifest.identifier]: GroupAgentBuilderInspectors as Record<
       string,
@@ -453,6 +456,7 @@ export const registerBuiltinToolSurfaces = (): void => {
     >,
     [ClaudeCodeIdentifier]: ClaudeCodeStreamings as Record<string, BuiltinStreaming>,
     [QODER_IDENTIFIER]: ClaudeCodeStreamings as Record<string, BuiltinStreaming>,
+    [ZCODE_IDENTIFIER]: ClaudeCodeStreamings as Record<string, BuiltinStreaming>,
     [CloudSandboxManifest.identifier]: CloudSandboxStreamings as Record<string, BuiltinStreaming>,
     [ImageGenerationManifest.identifier]: ImageGenerationStreamings,
     [GroupAgentBuilderManifest.identifier]: GroupAgentBuilderStreamings as Record<

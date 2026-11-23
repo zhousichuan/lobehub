@@ -8,6 +8,7 @@ import { type RenderDisplayControl } from '@lobechat/types';
 import { CodexRenderDisplayControls } from './codex/displayControls';
 
 const QODER_IDENTIFIER = 'qoder';
+const ZCODE_IDENTIFIER = 'zcode';
 
 // Kept separate from `./renders` so consumers that only need display-control
 // fallbacks (e.g. the tool store selector) don't pull in every builtin tool's
@@ -39,6 +40,7 @@ const getDynamicRenderDisplayControlResolvers = (): Record<
     [CloudSandboxIdentifier]: resolveLocalSystemRenderDisplayControl,
     [LocalSystemIdentifier]: resolveLocalSystemRenderDisplayControl,
     [QODER_IDENTIFIER]: resolveClaudeCodeRenderDisplayControl,
+    [ZCODE_IDENTIFIER]: resolveClaudeCodeRenderDisplayControl,
   };
 };
 

@@ -5,6 +5,7 @@ export {
   CopilotAcpAdapter,
   GrokBuildAdapter,
   QoderAdapter,
+  ZcodeAdapter,
 } from './adapters';
 export {
   appendAttachedFilesToPrompt,
@@ -69,6 +70,9 @@ export {
   REMOTE_HETEROGENEOUS_AGENT_CONFIGS,
   resolveHeterogeneousAgentCommand,
   usesHeterogeneousSessionInitialModel,
+  ZCODE_CLI_AUTH_DOCS_URL,
+  ZCODE_CLI_INSTALL_COMMANDS,
+  ZCODE_CLI_INSTALL_DOCS_URL,
 } from './config';
 export type {
   HeteroErrorAttribution,

@@ -19,6 +19,7 @@ const IMAGE_INPUT_AGENT_TYPES = new Set<string>([
   'opencode',
   'pi',
   'qoder',
+  'zcode',
 ]);
 
 export const heteroAgentSupportsImageInput = (type?: string | null): boolean =>

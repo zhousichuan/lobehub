@@ -17,6 +17,7 @@ import {
   Pi,
   Qoder,
   Trae,
+  ZAI,
 } from '@lobehub/icons';
 import { createElement } from 'react';
 
@@ -38,6 +39,7 @@ const avatarIcons = {
   'pi': Pi.Avatar,
   'qoder': Qoder.Avatar,
   'trae': Trae.Avatar,
+  'zcode': ZAI.Avatar,
 } as const satisfies Record<HeterogeneousAgentClientConfig['type'], unknown>;
 
 /**

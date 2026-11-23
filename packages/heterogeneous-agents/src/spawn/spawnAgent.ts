@@ -275,6 +275,22 @@ export const AMP_BASE_ARGS = [
 
 export const OPENCODE_BASE_ARGS = ['run', '--format', 'json', '--thinking', '--auto'] as const;
 export const KIMI_CODE_BASE_ARGS = ['--output-format', 'stream-json'] as const;
+/**
+ * Headless ZCode stream-json flags shared by desktop and `lh hetero exec`.
+ * The prompt itself arrives from `buildAgentInput` as `-p <text>` (ZCode has
+ * no stream-json input mode), and `--mode yolo` pins the headless permission
+ * default so a changed CLI default cannot start blocking on approvals.
+ * AskUserQuestion cannot be serviced by a one-shot print-mode process, so it
+ * is removed for the run the same way Claude Code headless does.
+ */
+export const ZCODE_BASE_ARGS = [
+  '--output-format',
+  'stream-json',
+  '--mode',
+  'yolo',
+  '--disallowed-tools',
+  'AskUserQuestion',
+] as const;
 export const QODER_BASE_ARGS = [
   '-p',
   '--input-format',
@@ -411,6 +427,23 @@ export const buildQoderArgs = ({
   ...inputArgs,
 ];
 
+export interface ZcodeSpawnArgsOptions {
+  extraArgs?: string[];
+  inputArgs?: string[];
+  resumeSessionId?: string;
+}
+
+export const buildZcodeArgs = ({
+  extraArgs = [],
+  inputArgs = [],
+  resumeSessionId,
+}: ZcodeSpawnArgsOptions): string[] => [
+  ...ZCODE_BASE_ARGS,
+  ...(resumeSessionId ? ['--resume', resumeSessionId] : []),
+  ...extraArgs,
+  ...inputArgs,
+];
+
 const buildSpawnArgs = (params: BuildSpawnArgsParams): string[] => {
   switch (params.agentType) {
     case 'antigravity': {
@@ -439,6 +472,9 @@ const buildSpawnArgs = (params: BuildSpawnArgsParams): string[] => {
     }
     case 'qoder': {
       return buildQoderArgs(params);
+    }
+    case 'zcode': {
+      return buildZcodeArgs(params);
     }
     default: {
       throw new Error(`spawnAgent: unsupported agent type "${params.agentType}"`);

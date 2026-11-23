@@ -222,6 +222,7 @@ export { getHeterogeneousAgentSpawnEnv } from './presetEnv';
 export {
   AMP_BASE_ARGS,
   buildQoderArgs,
+  buildZcodeArgs,
   CLAUDE_CODE_BASE_ARGS,
   CODEBUDDY_BASE_ARGS,
   CODEX_BYPASS_APPROVALS_AND_SANDBOX_ARG,
@@ -236,6 +237,8 @@ export {
   type SpawnAgentHandle,
   type SpawnAgentOptions,
   spawnTraeAcpAgent,
+  ZCODE_BASE_ARGS,
+  type ZcodeSpawnArgsOptions,
 } from './spawnAgent';
 export { toStreamEvent } from './streamEvent';
 export {

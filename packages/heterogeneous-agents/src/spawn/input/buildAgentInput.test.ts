@@ -318,6 +318,42 @@ describe('buildAgentInput', () => {
     });
   });
 
+  describe('zcode', () => {
+    it('passes the prompt inline via -p with no stdin and attaches path images', async () => {
+      const filePath = path.join(tmp, 'zcode input.png');
+      await writeFile(filePath, PNG_BYTES);
+      const plan = await buildAgentInput('zcode', [
+        { text: 'first', type: 'text' },
+        { source: { path: filePath, type: 'path' }, type: 'image' },
+        { text: 'second', type: 'text' },
+      ]);
+
+      expect(plan.args).toEqual(['-p', 'first\n\nsecond', '--attach', filePath]);
+      expect(plan.stdin).toBe('');
+    });
+
+    it('materializes base64 images into cacheDir and attaches the path', async () => {
+      const plan = await buildAgentInput(
+        'zcode',
+        [
+          {
+            source: { data: PNG_BYTES.toString('base64'), mediaType: 'image/png', type: 'base64' },
+            type: 'image',
+          },
+        ],
+        { cacheDir: tmp },
+      );
+
+      expect(plan.stdin).toBe('');
+      expect(plan.args[0]).toBe('-p');
+      expect(plan.args[1]).toBe('');
+      expect(plan.args[2]).toBe('--attach');
+      expect(plan.args[3]).toMatch(/\.png$/);
+      const written = await readFile(plan.args[3]!);
+      expect(written.equals(PNG_BYTES)).toBe(true);
+    });
+  });
+
   describe('kimi-code', () => {
     it('puts text in the --prompt argv with no stdin', async () => {
       await expect(buildAgentInput('kimi-code', 'hello')).resolves.toEqual({

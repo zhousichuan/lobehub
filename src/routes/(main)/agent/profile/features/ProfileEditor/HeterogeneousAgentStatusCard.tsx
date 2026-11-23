@@ -378,7 +378,8 @@ const CliHeterogeneousAgentStatusCard = memo<HeterogeneousAgentStatusCardProps>(
         provider.type === 'opencode' ||
         provider.type === 'pi' ||
         provider.type === 'qoder' ||
-        provider.type === 'trae') &&
+        provider.type === 'trae' ||
+        provider.type === 'zcode') &&
       !detecting &&
       !status?.available &&
       !isUsingCustomCommand;

@@ -31,6 +31,7 @@ import {
   Pi,
   Qoder,
   Trae,
+  ZAI,
 } from '@lobehub/icons';
 
 /**
@@ -97,6 +98,7 @@ const CLI_BRANDS: Record<LocalHeterogeneousAgentType, ConnectableProvider['brand
   'pi': Pi,
   'qoder': Qoder,
   'trae': Trae,
+  'zcode': ZAI,
 };
 
 const PLATFORM_BRANDS: Record<RemoteHeterogeneousAgentType, ConnectableProvider['brand']> = {

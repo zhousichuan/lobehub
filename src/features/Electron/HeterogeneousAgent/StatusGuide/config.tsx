@@ -16,6 +16,7 @@ import {
   Pi,
   Qoder,
   Trae,
+  ZAI,
 } from '@lobehub/icons';
 
 import {
@@ -84,6 +85,10 @@ const GUIDE_PRESENTATION_CONFIG = {
   'trae': {
     icon: Trae,
     translationPrefix: 'traeInstallGuide',
+  },
+  'zcode': {
+    icon: ZAI,
+    translationPrefix: 'zcodeInstallGuide',
   },
 } as const satisfies Record<
   LocalHeterogeneousAgentType,
